@@ -1,0 +1,86 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"  xmlns:core="sap.ui.core" controllerName="com.kt.sap.project4.controller.Firstview">
+ <Page id="page" title="" xmlns:form="sap.ui.layout.form">
+   <content>
+           <IconTabBar id="idIconTabBar"
+		class="sapUiResponsiveContentPadding">
+        <items>
+        	<IconTabFilter  icon="sap-icon://create-form" text="{i18n>first_icon}" key="Studentinfo" >
+          
+                
+
+                <VBox >
+                  <core:Fragment fragmentName="com.kt.sap.project4.fragment.Testdialog" type="XML" />
+                </VBox>
+
+            
+
+             </IconTabFilter>
+             <IconTabFilter icon="sap-icon://table-view" text="{i18n>sec_icon}"  count="{myModel>/count}">
+            
+         <Table mode="SingleSelectLeft"  items="{myModel>/InputData}"  alternateRowColors="true" class="sapUiResponsiveMargin" id="idmytable" >
+                  <headerToolbar>
+                      <Toolbar>
+                     <Title text="{i18n>studentdetails}" />
+                        <ToolbarSpacer />
+                        <Button  icon="sap-icon://add" press="onAddbtnpress"/>
+                        <Button icon="sap-icon://delete" press="onDeletePress" />
+                        <Button icon="sap-icon://edit"   press="onEditpress"/>
+                    </Toolbar>
+                </headerToolbar>
+              <columns>
+
+                 <Column>
+                       <Text text = "{i18n>StudentName}"/>
+                  </Column>
+                  <Column >
+                       <Text text = "{i18n>Class}"/>
+                  </Column>
+                  <Column >
+                       <Text text = "{i18n>Rollno}"/>
+                  </Column>
+                  <Column >
+                       <Text text = "{i18n>Section}"/>
+                  </Column>
+                  <Column >
+                       <Text text = "{i18n>Height}"/>
+                  </Column>
+                  <Column >
+                       <Text text = "{i18n>weight}"/>
+                  </Column>
+                  <Column > 
+                       <Text text = "{i18n>Result}"/>
+                  </Column>
+              </columns>
+              <items>
+                 <ColumnListItem >
+                       <cells>
+                           <Text text="{myModel>Studentname}"/>
+                           <Text text="{myModel>Class}"/>
+                           <Text text="{myModel>Rollno}"/>
+                           <Text text="{=${myModel>Section}.toUpperCase()}"/>
+                           <Text text="{myModel>Height}"/>
+
+                           <Text text="{myModel>weight}"/>
+
+                           <ObjectStatus text="{=${myModel>result} >= 30 ? 'Pass' : 'Fail'}" state="{=${myModel>result} >= 30 ? 'Success' : 'Error'}"/>
+                        
+                       </cells>
+                 </ColumnListItem>
+              </items>
+         
+         
+         </Table>
+        
+        
+        </IconTabFilter>
+          
+        
+        
+             
+          
+          
+          </items>
+          </IconTabBar>
+</content>
+</Page>
+</mvc:View>
