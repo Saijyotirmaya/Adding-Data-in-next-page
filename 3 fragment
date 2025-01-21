@@ -1,0 +1,164 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core">
+
+	<VBox >
+             <f:SimpleForm  title="{i18n>Form_tile}"
+             class = "classsimpleform"
+             editable="true"
+            	labelSpanXL="4"
+					labelSpanL="5"
+					labelSpanM="12"
+					labelSpanS="12"
+					adjustLabelSpan="false"
+					emptySpanXL="0"
+					emptySpanL="0"
+					emptySpanM="0"
+					emptySpanS="0"
+					columnsXL="2"
+					columnsL="2"
+					columnsM="3"
+			    singleContainerFullSize="false">
+            
+
+
+              	<Label text="{i18n>StudentName}"  labelFor="studentname"/>
+				<Input value="{formData>/sname}"/>
+                <Label text="{i18n>Class}"  labelFor="class"/>
+				<Input value="{formData>/class}"/>
+                <Label text="{i18n>Rollno}"  labelFor="rollno"/>
+				<Input value="{formData>/rollno}"/>
+				<Label text="{i18n>Section}"  labelFor="section"/>
+				<Input value="{formData>/section}"/>
+                <Label text="{i18n>Height}"  labelFor="height"/>
+				<Input value="{formData>/height}"/>
+                <Label text="{i18n>weight}"  labelFor="weight"/>
+				<Input value="{formData>/weight}"/>
+                <Label text="{i18n>Result}"  labelFor="result"/>
+				<Input value="{formData>/result}"/>
+                
+              <Button text="Save" type="Emphasized" press="onSavepress"></Button>
+            
+
+             </f:SimpleForm>
+            
+          </VBox>
+</core:FragmentDefinition>
+
+
+
+
+
+
+
+
+
+2
+
+
+
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core">
+
+	<VBox >
+	
+             <f:SimpleForm  title="{i18n>Form_tile}"
+             class = "classsimpleform"
+             editable="true"
+            	labelSpanXL="4"
+					labelSpanL="4"
+					labelSpanM="12"
+					labelSpanS="12"
+					adjustLabelSpan="false"
+					emptySpanXL="0"
+					emptySpanL="0"
+					emptySpanM="0"
+					emptySpanS="0"
+					columnsXL="2"
+					columnsL="2"
+					columnsM="3"
+			    singleContainerFullSize="false">
+            
+
+
+              	<Label text="{i18n>StudentName}"  labelFor="studentname"/>
+				<Input id="idStudenNname" type="Text" required="true"/>
+                <Label text="{i18n>Class}"  labelFor="class"/>
+				<Input id="idClass" type="Text" required="true"/>
+                <Label text="{i18n>Rollno}"  labelFor="rollno"/>
+				<Input id="idRoll_no" type="Number" required="true"/>
+				<Label text="{i18n>Section}"  labelFor="section"/>
+				<Input id="idSection" type="Text" required="true"/>
+                <Label text="{i18n>Height}"  labelFor="height"/>
+				<Input id="idHeight" type="Text" required="true"/>
+                <Label text="{i18n>weight}"  labelFor="weight"/>
+				<Input id="idWeight"  type="Text" required="true"/>
+                <Label text="{i18n>Result}"  labelFor="result"/>
+				<Input id="idResult" type="Number" required="true"/>
+                
+              <Button text="Save" type="Emphasized" press="onSave"></Button>
+              <Button text="Cancel"  type="Emphasized" press="oncancelpress"></Button>
+
+             </f:SimpleForm>
+            
+          </VBox>
+</core:FragmentDefinition>
+
+
+3
+
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core">
+
+	<VBox >
+             <f:SimpleForm  title="{i18n>Form_tile}"
+             class = "classsimpleform"
+             editable="true"
+            	labelSpanXL="4"
+					labelSpanL="5"
+					labelSpanM="12"
+					labelSpanS="12"
+					adjustLabelSpan="false"
+					emptySpanXL="0"
+					emptySpanL="0"
+					emptySpanM="0"
+					emptySpanS="0"
+					columnsXL="2"
+					columnsL="2"
+					columnsM="3"
+			    singleContainerFullSize="false">
+            
+
+              	<Label text="{i18n>StudentName}"  labelFor="studentname"/>
+				<Input id="idStudenNname1" type="Text" required="true"/>
+                <Label text="{i18n>Class}"  labelFor="class"/>
+				<Input id="idClass1" type="Text" required="true"/>
+                <Label text="{i18n>Rollno}"  labelFor="rollno"/>
+				<Input id="idRoll_no1" type="Number" required="true"/>
+				<Label text="{i18n>Section}"  labelFor="section"/>
+				<Input id="idSection1" type="Text" required="true"/>
+                <Label text="{i18n>Height}"  labelFor="height"/>
+				<Input id="idHeight1" type="Text" required="true"/>
+                <Label text="{i18n>weight}"  labelFor="weight"/>
+				<Input id="idWeight1"  type="Text" required="true"/>
+                <Label text="{i18n>Result}"  labelFor="result"/>
+				<Input id="idResult1" type="Number" required="true"/>
+                
+
+
+              <Button text="Submit" type="Emphasized" press="onSubmitbtnpress"></Button>
+              <Button text="Cancel"  type="Emphasized" press="oncancelpress"></Button>
+
+
+             </f:SimpleForm>
+            
+          </VBox>
+</core:FragmentDefinition>
